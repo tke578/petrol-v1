@@ -1,7 +1,6 @@
 language: ruby
 rvm:
-- 2.3.3
+- 2.6.1
 script:
-- bundle update bundler
 - bundle install
 - bundle exec rspec
