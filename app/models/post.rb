@@ -14,7 +14,7 @@ class Post
 	end
 
 	def todays_rooms
-		collection = @db_client[:rooms].find('post_time' => { '$gt' => Date.today.strftime("%F") })
+		collection = @db_client[:rooms].find('post_time' => { '$gt' => Date.yesterday.strftime("%F") })
 		@total_collection_size = collection.count_documents
 		return collection
 	end
